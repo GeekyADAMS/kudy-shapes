@@ -25,9 +25,10 @@ npm run test:unit
 npm run lint
 ```
 
-# Docker Compose Setup
-
-## Projet Build
+### Docker Build
 ```
 docker-compose build --no-cache
 ```
+
+### My CV
+See [attached CV](https://drive.google.com/file/d/1oJDjmhtbUe3SczTLY68mtb7y_ZY6F8eJ/view?usp=sharing).
