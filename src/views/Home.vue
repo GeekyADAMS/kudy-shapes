@@ -13,7 +13,7 @@
   </div>
 
   <div class="lg:t-hidden t-flex-col t-items-center t-w-3/5 lg:t-w-1/5 t-mr-20" :class="{'t-hidden': !showMobileConfig, 't-fixed': showMobileConfig}" style="z-index: 1000; top: 5rem;" v-if="isMobile">
-    <Configuration ref="configs" v-if="showMobileConfig" />
+    <Configuration ref="configs" v-show="showMobileConfig" />
 
   </div>
 
