@@ -1,0 +1,50 @@
+:root{
+  --dark: #0D0B21;
+}
+
+.dark_bg{
+  background: var(--dark)
+}
+
+.h-fit{
+  height: fit-content;
+}
+
+.yellow-border{
+  border: 3px solid #FFFF24;
+}
+.red-border{
+  border: 3px solid #48BB78;
+}
+
+.border-3{
+  border: 3px solid rgba(255, 255, 255, .7);
+}
+
+input[type='range'] {
+  overflow: hidden;
+  -webkit-appearance: none;
+  border-radius: 10px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 13px;
+  -webkit-appearance: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: grab;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 13px;
+  -webkit-appearance: none;
+  height: 13px;
+  cursor: grab;
+  background: var(--dark);
+  border-radius: 10px;
+}
+
+input[type='range']:focus, input[type='range']:active{
+  border: none;
+  outline: none;
+}
