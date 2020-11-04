@@ -13,7 +13,7 @@
   <h1 class="t-mt-10 t-font-bold t-text-white t-text-3xl">Saved Shapes</h1>
   <p class="t-mt-2 t-font-medium t-text-white">Double tap a shape to remove from saved shapes.</p>
 
-  <div class="t-w-full h-fit t-mt-10 t-flex t-flex-row t-flex-wrap t-overflow-x-scroll">
+  <div class="t-w-full t-mt-10 t-flex t-flex-row t-flex-wrap x-scroll">
     <p class="t-mt-20 t-text-white t-text-center t-font-extrabold t-opacity-50  t-text-4xl t-mx-auto" v-if="!shapes.length">No shapes created.</p>
 
     <div v-for="(shape, index) in shapes" :key="index" class="t-mr-6 t-mt-4 t-mb-6 t-cursor-pointer t-flex t-flex-col t-items-center" @dblclick.prevent="removeShape(index)">
