@@ -73,8 +73,8 @@ export default {
         name: 'pick shape',
         length: 100,
         breadth: 200,
-        fillColor: 'pick color',
-        strokeColor: 'pick color',
+        fillColor: 'blue',
+        strokeColor: 'black',
         strokeWidth: '',
         rotation: 0
       },
