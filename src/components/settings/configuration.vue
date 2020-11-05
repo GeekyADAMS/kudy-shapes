@@ -24,7 +24,7 @@
     <input type="color" id="color" class="t-mt--20 t-relative t-w-full t-opacity-0" v-model="shapeProps.fillColor">
   </div>
 
-  <div class="t-w-full stroke" v-show="!['hexagon', 'star', 'triangle', 'trapezoid', 'arrow', 'chevron', 'cross', 'Heptagon', 'Close'].includes(shapeProps.name)">
+  <div class="t-w-full stroke" v-show="!['hexagon', 'star', 'triangle', 'trapezoid', 'arrow', 'chevron', 'cross', 'heptagon', 'close'].includes(shapeProps.name)">
     <label for="stroke-color">
       <p class="t-font-bold t-text-lg">Select Stroke Color</p>
       <div class="t-mt-2 t-w-full t-border-box animated-border t-py-4 t-px-4 t-rounded-full t-bg-transparent t-h-8 t-flex t-flex-row t-justify-between t-items-center t-cursor-pointer t-overflow-hidden border-3">
