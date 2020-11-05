@@ -1,5 +1,5 @@
 <template>
-<div class="t-flex t-items-center t-justify-center" :class="{skew: name === 'parallelogram'}" :style="{width: `${breadth}px`, height: `${length}px`, border: `5px solid ${stroke}`, backgroundColor: fill, transform: `rotate(${rotation}deg)`}">
+<div class="t-flex t-items-center t-justify-center" :class="{'skewSides': name === 'parallelogram'}" :style="{width: `${breadth}px`, height: `${length}px`, border: `5px solid ${stroke}`, backgroundColor: fill, transform: `rotate(${rotation}deg)`}">
 </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-.skew {
+.skewSides {
   transform: skew(25deg);
   transition: transform .5s ease;
 }
