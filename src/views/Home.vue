@@ -18,21 +18,21 @@
   </div>
 
   <div class="t-flex lg:t-hidden t-flex-row t-items-center t-mb-4 t-flex-row">
-    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-8 t-border-box t-bg-orange-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-4': true}" @click.prevent="showMobileConfigModal">
+    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-3 t-border-box t-bg-orange-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-4': true}" @click.prevent="showMobileConfigModal">
       <span v-show="!showMobileConfig">New</span>
       <span v-show="showMobileConfig">Close</span>
     </button>
 
-    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-8 t-border-box t-bg-green-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-4': true}" @click.prevent="saveShape">
+    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-3 t-border-box t-bg-green-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-4': true}" @click.prevent="saveShape">
       <span>Save Shape</span>
     </button>
 
-    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-8 t-border-box t-bg-range-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-0': true}" @click.prevent="$router.push('/saved-shapes')">
+    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-3 t-border-box t-bg-range-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-0': true}" @click.prevent="$router.push('/saved-shapes')">
       <span>See all</span>
     </button>
   </div>
 
-  <div class=" t-w-full lg:t-w-4/5 t-h-full t-rounded-lg t-bg-white t-flex t-items-center t-justify-center">
+  <div class=" t-w-full lg:t-w-4/5 t-h-full t-rounded-lg t-bg-white t-flex t-items-center t-justify-center render-screen">
     <Square :size="shape.length" :stroke="shape.strokeColor" :fill="shape.fillColor" v-show="shape.name === 'square'" :rotation="shape.rotation" />
     <Circlee :size="shape.length" :stroke="shape.strokeColor" :fill="shape.fillColor" v-show="shape.name === 'circle'" :rotation="shape.rotation" />
     <Oval :size="shape.length" :stroke="shape.strokeColor" :fill="shape.fillColor" :rotation="shape.rotation" v-show="shape.name === 'oval'" />
@@ -86,6 +86,8 @@ export default {
 
       this.savedShapes.push(this.shape)
       localStorage.setItem('savedShapes', JSON.stringify(this.savedShapes))
+
+      this.showMobileConfig = false
 
       this.$store.dispatch('flashNotif', {
         message: {

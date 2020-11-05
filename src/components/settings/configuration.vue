@@ -1,6 +1,6 @@
 <template>
 <div class="t-text-white t-w-full t-bg-purple-500 h-fit t-rounded-lg t-p-6">
-  <div class="t-w-full t-relative" ref="ext">
+  <div class="t-w-full t-relative shape" ref="ext">
     <label for="shape" class="t-font-bold t-text-lg">Select Shape</label>
     <div id="shape" class="t-mt-2 t-w-full t-border-box t-py-4 t-px-4 t-rounded-full t-bg-transparent border-3 t-h-8 t-flex t-flex-row t-justify-between t-items-center t-cursor-pointer" @click.prevent="showShapes = !showShapes">
       <p>{{shapeProps.name}}</p>
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="t-w-full t-mt-6">
+  <div class="t-w-full t-mt-6 fill">
     <label for="color">
       <p class="t-font-bold t-text-lg">Select Fill Color</p>
       <div class="t-mt-2 t-w-full t-border-box animated-border t-py-4 t-px-4 t-rounded-full t-bg-transparent t-h-8 t-flex t-flex-row t-justify-between t-items-center t-cursor-pointer t-overflow-hidden border-3">
@@ -24,7 +24,7 @@
     <input type="color" id="color" class="t-mt--20 t-relative t-w-full t-opacity-0" v-model="shapeProps.fillColor">
   </div>
 
-  <div class="t-w-full" v-show="!['hexagon', 'star', 'triangle', 'trapezoid', 'arrow', 'chevron', 'cross', 'Heptagon', 'Close'].includes(shapeProps.name)">
+  <div class="t-w-full stroke" v-show="!['hexagon', 'star', 'triangle', 'trapezoid', 'arrow', 'chevron', 'cross', 'Heptagon', 'Close'].includes(shapeProps.name)">
     <label for="stroke-color">
       <p class="t-font-bold t-text-lg">Select Stroke Color</p>
       <div class="t-mt-2 t-w-full t-border-box animated-border t-py-4 t-px-4 t-rounded-full t-bg-transparent t-h-8 t-flex t-flex-row t-justify-between t-items-center t-cursor-pointer t-overflow-hidden border-3">
@@ -36,7 +36,7 @@
     <input type="color" id="stroke-color" class="t-mt--20 t-relative t-w-full t-opacity-0" v-model="shapeProps.strokeColor">
   </div>
 
-  <div class="t-w-full">
+  <div class="t-w-full height">
     <label for="length">
       <p class="t-font-bold t-text-lg" v-show="shapeProps.name != 'circle'">Set Height ({{shapeProps.length}} px)</p>
       <p class="t-font-bold t-text-lg" v-show="shapeProps.name === 'circle'">Set Radius ({{shapeProps.length}} px)</p>
@@ -45,7 +45,7 @@
     <input v-model="shapeProps.length" type="range" id="length" :min="10" :max="500" step="1" class="range-slider t-w-full" />
   </div>
 
-  <div class="t-w-full t-mt-2" v-show="!['circle', 'oval', 'square'].includes(shapeProps.name)">
+  <div class="t-w-full t-mt-2 width" v-show="!['circle', 'oval', 'square'].includes(shapeProps.name)">
     <label for="width">
       <p class="t-font-bold t-text-lg">Set Width ({{shapeProps.breadth}} px)</p>
     </label>
@@ -53,7 +53,7 @@
     <input v-model="shapeProps.breadth" type="range" :min="10" :max="500" step="1" class="range-slider t-w-full" id="width" />
   </div>
 
-  <div class="t-w-full t-mt-2">
+  <div class="t-w-full t-mt-2 rotation">
     <label for="rotation">
       <p class="t-font-bold t-text-lg">Rotate ({{shapeProps.rotation}} deg)</p>
     </label>

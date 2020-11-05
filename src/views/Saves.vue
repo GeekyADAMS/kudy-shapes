@@ -1,11 +1,11 @@
 <template>
 <div class="t-w-screen t-border-box t-p-10 t-pb-5 t-flex t-flex-col">
   <div class="t-flex t-flex-row t-items-center">
-    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-8 t-border-box t-bg-green-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-4': true}" @click.prevent="$router.push('/')">
+    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-3 lg:t-px-8 t-border-box t-bg-green-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-4': true}" @click.prevent="$router.push('/')">
       <span>Create New Shape</span>
     </button>
 
-    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-8 t-border-box t-bg-red-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-0': true}" @click.prevent="removeAll">
+    <button type="submit" :class="{'w-fit t-rounded-lg t-p-2 t-px-3 lg:t-px-8 t-border-box t-bg-red-600 t-text-center t-flex t-items-center t-text-white t-border-0 t-outline-none t-justify-center clickable-2 t-font-bold t-mr-0': true}" @click.prevent="removeAll">
       <span>Delete All Saved Shapes</span>
     </button>
   </div>
